@@ -1,5 +1,4 @@
 from math import log2
-from colored import fg, attr
 from textwrap import wrap
 
 def is_empty(text):
@@ -135,9 +134,9 @@ def inject_data_to_dict(network_ip, length_of_subnets, subnets):
         network_ip = get_next_network_ip(network_ip, mask)
 
 def main():
-    network_ip = input(f'{fg(2)}Ingrese la dirección de red: {attr(0)}')
-    endpoint_numbers_per_network = input(f'{fg(2)}Ingrese el número de hosts por red: {attr(0)}')
-    prefix = input(f'{fg(2)}Ingrese el prefijo de la máscara de subred (deje vacío para el valor predeterminado según la dirección de red): {attr(0)}')
+    network_ip = input("Ingrese la dirección de red: ")
+    endpoint_numbers_per_network = input("Ingrese el número de hosts por red: ")
+    prefix = input("Ingrese el prefijo de la máscara de subred (deje vacío para el valor predeterminado según la dirección de red): ")
 
     if is_correct_network_address(network_ip) and is_correct_endpoint_numbers_per_network(endpoint_numbers_per_network):
         first_network_ip = calculate_first_network(network_ip, prefix)
@@ -146,18 +145,17 @@ def main():
             subnets = calculate_vlsm(first_network_ip, endpoint_numbers_per_network, prefix)
 
             for subnet in subnets:
-                print(f'\n{fg(2)}Información de la subred (Subnet Information)')
-                print(f'{fg(1)}Dirección de Red:', subnet["Dirección IP"])
-                print(f'{fg(5)}Prefijo:', subnet["Prefijo"])
-                print(f'{fg(4)}Rango de IPs:', subnet["Rango de IPs"])
-                print(f'{fg(6)}Dirección de Broadcast:', subnet["Broadcast"])
-                print(f'{fg(7)}Máscara de Subred:', subnet["Mascara de subred"])
-                print(f'{fg(8)}Hosts direccionables:', subnet["Hosts direccionables"])
-                print(attr(0))
+                print("\nInformación de la subred (Subnet Information)")
+                print("Dirección de Red:", subnet["Dirección IP"])
+                print("Prefijo:", subnet["Prefijo"])
+                print("Rango de IPs:", subnet["Rango de IPs"])
+                print("Dirección de Broadcast:", subnet["Broadcast"])
+                print("Máscara de Subred:", subnet["Mascara de subred"])
+                print("Hosts direccionables:", subnet["Hosts direccionables"])
         else:
             print("Primera IP calculada inválida.")
     else:
-        print("Entrada inválida.")
+        print("Entrada inválida")
 
 if __name__ == "__main__":
     main()

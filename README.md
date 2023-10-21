@@ -4,9 +4,7 @@ Esta es una calculadora de Subneteo de Longitud Variable (VLSM) escrita en Pytho
 
 ## Requisitos
 
-Asegúrate de tener Python 3.x instalado en tu sistema. Además, debes instalar la biblioteca `colored` para la salida con colores en la consola. Puedes instalarla usando pip:
-
-`pip install coloredlogs`
+Asegúrate de tener Python 3.x instalado en tu sistema.
 
 ## Uso
 
@@ -23,7 +21,6 @@ Asegúrate de tener Python 3.x instalado en tu sistema. Además, debes instalar 
 - Cálculo de la primera dirección IP utilizable.
 - Cálculo de la última dirección IP utilizable.
 - Cálculo de la dirección de broadcast.
-- Generación de salidas con colores para una mejor visualización.
 
 ## Contribuir
 
