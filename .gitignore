@@ -1,0 +1,30 @@
+# Entornos virtuales (reemplazar "venv" si usas un nombre diferente)
+venv/
+
+# Archivos de Byte-compiled (Bytecode) de Python
+__pycache__/
+
+# Archivos generados por la ejecución del script (pueden variar según tu entorno)
+*.pyc
+*.pyo
+__pycache__
+
+# Archivos de registro y carpetas de registro
+logs/
+*.log
+
+# Archivos de configuración
+config.ini
+
+# Entornos de desarrollo y archivos específicos del IDE
+.idea/
+.vscode/
+
+# Archivos de caché y compilación de Jupyter Notebooks
+.ipynb_checkpoints/
+
+# Dependencias de Python (carpeta "site-packages" generada por pip)
+site-packages/
+
+# Carpetas y archivos generados automáticamente
+__init__.py
