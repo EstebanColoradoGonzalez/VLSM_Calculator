@@ -1,4 +1,5 @@
 from math import log2
+import os
 from textwrap import wrap
 
 def is_empty(text):
@@ -133,7 +134,7 @@ def inject_data_to_dict(network_ip, length_of_subnets, subnets):
         })
         network_ip = get_next_network_ip(network_ip, mask)
 
-def main():
+def procesar_opcion():
     network_ip = input("Ingrese la dirección de red: ")
     endpoint_numbers_per_network = input("Ingrese el número de hosts por red: ")
     prefix = input("Ingrese el prefijo de la máscara de subred (deje vacío para el valor predeterminado según la dirección de red): ")
@@ -156,6 +157,18 @@ def main():
             print("Primera IP calculada inválida.")
     else:
         print("Entrada inválida")
+
+def limpiar_consola():
+    os.system('cls')
+
+def menu():
+    while True:
+        procesar_opcion()
+        input("Presiona Enter para continuar...")
+        limpiar_consola()
+
+def main():
+    menu()
 
 if __name__ == "__main__":
     main()
